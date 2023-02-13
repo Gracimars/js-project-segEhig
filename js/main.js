@@ -8,13 +8,13 @@ function init() {
   if (numberOfJobs) {
     ubicationCompany = prompt(
       '¿La empresa se encuentra en Gran Buenos Aires o en CABA?'
-    );
+    ).toLowerCase();
   }
 
   if (ubicationCompany) {
     typeOfEvaluation = prompt(
       "Elige una de estas opciones : 'Evaluacion ergonomica', 'Evaluacion de iluminacion' 'Evaluacion de ruido'"
-    );
+    ).toLowerCase();
   }
 
   const total = calcCostTotal(numberOfJobs, ubicationCompany, typeOfEvaluation);
@@ -27,7 +27,7 @@ function init() {
 
 function calcPositionAndUbication(numberOfJobs, ubicationCompany) {
   let resultado;
-  while (ubicationCompany == 'CABA') {
+  while (ubicationCompany == 'caba') {
     if (numberOfJobs <= 5) {
       resultado = 200;
     } else if (numberOfJobs > 5 && numberOfJobs <= 10) {
@@ -40,14 +40,13 @@ function calcPositionAndUbication(numberOfJobs, ubicationCompany) {
     }
     return resultado;
   }
-  while (ubicationCompany == 'Gran Buenos Aires') {
+  while (ubicationCompany == 'gran buenos aires') {
     if (numberOfJobs <= 5) {
       resultado = 300;
     } else if (numberOfJobs > 5 && numberOfJobs <= 10) {
       resultado = 550;
     } else if (numberOfJobs > 10 && numberOfJobs <= 20) {
       resultado = 1000;
-      s;
     } else {
       resultado =
         'Lo siento, mas de 20 puestos excede nuestro limite actual de evaluaciones';
@@ -65,10 +64,10 @@ function calcCostTotal(numberOfJobs, ubicationCompany, typeOfEvaluation) {
       case 'evaluacion ergonomica':
         resultado = costo + 2000;
         break;
-      case 'Evaluacion de iluminacion':
+      case 'evaluacion de iluminacion':
         resultado = costo + 1500;
         break;
-      case 'Evaluacion de ruido':
+      case 'evaluacion de ruido':
         resultado = costo + 1700;
         break;
       default:
