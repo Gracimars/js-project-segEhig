@@ -1,3 +1,38 @@
 body {
   background-color: rgb(37, 192, 200);
 }
+
+.nav-enlace{
+  background: #FFDD67;
+  color:#444444;
+  padding: 10px 30px;
+  font-size: 25px;
+  display: inline-block;
+  text-decoration: none;
+}
+.nav-enlace:hover{
+  background: #FB9378 ;
+}
+nav{
+  background:#2C2D34;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+
+}
+@media (max-width: 600px) {
+  nav {
+    background: pink;
+    flex-direction: column;
+  }
+  .nav-enlace{
+    margin: 10px 0;
+  }
+}
+
+* {
+  margin: 0px;
+  
+  padding: 0px;
+  
+  box-sizing: border-box; }

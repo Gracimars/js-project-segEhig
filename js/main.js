@@ -76,7 +76,7 @@ function calcCostTotal(numberOfJobs, ubicationCompany, typeOfEvaluation) {
   }
   return resultado;
 }
-init()
+init();
 
 
 
