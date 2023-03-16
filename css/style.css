@@ -1,38 +1,94 @@
-body {
-  background-color: rgb(37, 192, 200);
-}
-
-.nav-enlace{
-  background: #FFDD67;
-  color:#444444;
-  padding: 10px 30px;
-  font-size: 25px;
-  display: inline-block;
-  text-decoration: none;
-}
-.nav-enlace:hover{
-  background: #FB9378 ;
-}
-nav{
-  background:#2C2D34;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-
-}
-@media (max-width: 600px) {
-  nav {
-    background: pink;
-    flex-direction: column;
-  }
-  .nav-enlace{
-    margin: 10px 0;
-  }
-}
-
 * {
-  margin: 0px;
-  
-  padding: 0px;
-  
-  box-sizing: border-box; }
+	margin: 0px;
+
+	padding: 0px;
+
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(159, 131, 181);
+}
+
+.nav-enlace {
+	background: #ffdd67;
+	color: #444444;
+	padding: 10px 30px;
+	font-size: 25px;
+	display: inline-block;
+	text-decoration: none;
+}
+.nav-enlace:hover {
+	background: #fb9378;
+}
+nav {
+	background: #2c2d34;
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.formulary {
+	width: 400px;
+	max-width: 100%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 20px;
+	position: relative;
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.formTitle {
+	text-align: center;
+	margin-top: 0;
+	color: rgba(0, 0, 0, 0.7);
+}
+.formularioInput,
+.formularioLabel,
+.formularioSubmit,
+.formularioSelect {
+	display: block;
+	/* width: 100%; */
+	/* font-size: 1.3em; */
+}
+.formularioInput,
+.formularioSelect {
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	/* margin-bottom: 20px; */
+}
+
+.formularioLabel {
+	padding-left: 15px;
+	/* position: absolute;
+	margin-top: -40px;
+	z-index: -50px; */
+	color: rgba(0, 0, 0, 0.5);
+	margin: 10px;
+}
+
+.formularioSubmit {
+	background: green;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+	nav {
+		background: pink;
+		flex-direction: column;
+	}
+	.nav-enlace {
+		margin: 10px 0;
+	}
+}
+h1,
+section {
+	text-align: center;
+	margin: 40px;
+}
