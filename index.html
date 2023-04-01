@@ -3,51 +3,70 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet" />
 		<title>Consultora de HySL</title>
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="js/main.js"></script>
-		<!--  <script src="js/segundaentrega.js"></script> -->
+		<script defer src="js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!-- <script defer src="js/segundaentrega.js"></script> -->
 	</head>
 	<body>
 		<header>
 			<!--  ENCABEZADO: Incluye la barra de navegacion y el logo  -->
 			<nav>
-				<button class="nav-boton">Menú</button>
-				<a href="#" class="nav-enlace">Servicios Disponibles</a>
-				<a href="#" class="nav-enlace">Calcula tu Presupuesto</a>
-				<a href="#" class="nav-enlace">Acerca de Nosotros</a>
-				<a href="#" class="nav-enlace">Contacto</a>
+				<a href="#services" class="nav-enlace">Servicios Disponibles</a>
+				<a href="#presupuesto" class="nav-enlace">Calcula tu Presupuesto</a>
+				<a href="#about" class="nav-enlace">Acerca de Nosotros</a>
+				<a href="#contact" class="nav-enlace">Contacto</a>
 			</nav>
 		</header>
 		<main>
 			<h1>CONSULTORA DE HIGIENE Y SEGURIDAD GRACIMARS</h1>
-			<section><h2>Servicios Disponibles</h2></section>
+			<section><h2 id="services">Servicios Disponibles</h2></section>
 			<article>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, similique natus omnis numquam
-				maiores itaque et ad culpa repellat quisquam explicabo placeat commodi, eos, delectus neque
-				perspiciatis praesentium quas cupiditate? Blanditiis dicta officia accusantium quo ex
-				sapiente doloremque dolore fugit, accusamus velit aperiam ratione repellendus! Rerum aliquam
-				corporis qui minus ducimus modi repellendus quo minima, fugit aspernatur veritatis beatae
-				molestiae. Totam, impedit, ullam quaerat quas tempora minima laboriosam nulla architecto
-				perspiciatis adipisci fugit aut voluptatibus iste, alias soluta officia illum hic veritatis
-				quod! Iure laborum omnis, temporibus voluptatum quod laudantium.
+				Contamos con un staff de ingenieros especialistas en evaluaciones ergonómicas, capaces de
+				aplicar los métodos vigentes más avanzados con el fin de cubrir sus necesidades y
+				cumplimentar la legislación vigente: Resolución Nº 886/15. Estudiamos la relación sistémica
+				entre persona y trabajo para mejorar la calidad de vida laboral y la eficiencia en el
+				desempeño de las tareas. Para esto aplicamos metodologías de mejora ergonómicas, utilizando
+				un software de desarrollo propio que ejecuta distintos métodos de evaluación ergonómica
+				reconocidos a nivel internacional. Nuestros profesionales además son miembros de la
+				Asociación de Ergonomía Argentina (ADEA) y son profesores titulares de la Cátedra Ergonomía
+				en la Licenciatura de Higiene y Seguridad en el Trabajo en la UTN-FRC. Los métodos
+				utilizados se encuentran enmarcados de acuerdo a la Resolución Nº 886/15. Además contamos
+				con equipos de medición de última generación con certificados de calibración al día:
+				dinamómetros, balanzas, equipos de vibraciones para mano/brazo y cuerpo entero, equipos de
+				carga térmica, estrés por frío, iluminación y otros, para realizar las evaluaciones más
+				eficientes del mercado.
+				<img class="serviciosDisponibles" src="recursos/re-asociados-servicios-ergonomia-1.jpg" />
 			</article>
 			<section>
-				<h2 class="formTitle">Calcula tu Presupuesto</h2>
+				<h2 id="presupuesto" class="formTitle">Calcula tu Presupuesto</h2>
 				<div class="mainForm">
 					<form id="formulary" action="" class="formulary">
 						<label for="numberOfJobs" class="formularioLabel">
 							Ingrese el numero de puestos de trabajo</label
 						>
-						<input type="number" id="numberOfJobs" class="formularioInput" required />
+						<input
+							type="number"
+							id="numberOfJobs"
+							class="formularioInput"
+							name="numberOfJobs"
+							required
+						/>
 						<label for="typeOfEvaluation" class="formularioLabel">
 							Seleccione el tipo de evaluación
 						</label>
 						<select id="typeOfEvaluation" name="typeOfEvaluation" class="formularioSelect" required>
-							<option value="Ergonomía">Ergonomía</option>
-							<option value="Iluminación">Iluminación</option>
-							<option value="Ruido">Ruido</option>
+							<option value="ergonomia">Ergonomía</option>
+							<option value="iluminacion">Iluminación</option>
+							<option value="ruido">Ruido</option>
 						</select>
 						<label for="ubicationCompany" class="formularioLabel">
 							Seleccione la ubicación de la compañìa
@@ -56,39 +75,51 @@
 							<option value="caba">CABA</option>
 							<option value="gran buenos aires">GRAN BUENOS AIRES</option>
 						</select>
-						<input type="submit" class="formularioSubmit" value="Calcular" />
+						<input
+							type="submit"
+							class="formularioSubmit"
+							name="formularioSubmit"
+							value="Calcular"
+						/>
 					</form>
 				</div>
 			</section>
 			<section>
-				<h2>Acerca de Nosotros</h2>
+				<h2 id="about">Acerca de Nosotros</h2>
 				<article>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, similique natus omnis
-					numquam maiores itaque et ad culpa repellat quisquam explicabo placeat commodi, eos,
-					delectus neque perspiciatis praesentium quas cupiditate? Blanditiis dicta officia
-					accusantium quo ex sapiente doloremque dolore fugit, accusamus velit aperiam ratione
-					repellendus! Rerum aliquam corporis qui minus ducimus modi repellendus quo minima, fugit
-					aspernatur veritatis beatae molestiae. Totam, impedit, ullam quaerat quas tempora minima
-					laboriosam nulla architecto perspiciatis adipisci fugit aut voluptatibus iste, alias
-					soluta officia illum hic veritatis quod! Iure laborum omnis, temporibus voluptatum quod
-					laudantium.
+					Somos una consultora internacional dedicada a la Seguridad Laboral, Higiene Industrial,
+					Ergonomía y Medio Ambiente con más de 30 años de trayectoria y know how. Nuestra sede
+					central se encuentra en Córdoba, y poseemos oficinas en Buenos Aires, Montevideo (Uruguay)
+					y Asunción (Paraguay). Además, contamos con profesionales asociados en todas las
+					provincias argentinas. Con una perspectiva multiprofesional y un equipo de profesionales
+					altamente comprometido y capacitado, trabajamos diariamente para ofrecerle un servicio
+					competitivo y eficaz, brindado asesoramiento idóneo, seguimiento y apoyo para los
+					siguientes ítems: Garantizar la adecuación de los recursos implementados con la
+					legislación vigente. Disminuir los riesgos de accidentes y el absentismo/ausentismo
+					laboral, reduciendo así costos directos e indirectos para la empresa. Gestionar
+					responsablemente todos los aspectos preventivos, de tal forma que los trabajadores puedan
+					percibirlos claramente. Para Clientes corporativos con establecimientos en distintas
+					provincias, ofrecemos un Sistema online en donde pueden visualizarse, en cualquier
+					momento, todas las gestiones realizadas.
+					<img class="nosotros" src="recursos/nosotrose.jpg" />
 				</article>
 			</section>
 			<section>
-				<h2>Contacto</h2>
-				<article>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, similique natus omnis
-					numquam maiores itaque et ad culpa repellat quisquam explicabo placeat commodi, eos,
-					delectus neque perspiciatis praesentium quas cupiditate? Blanditiis dicta officia
-					accusantium quo ex sapiente doloremque dolore fugit, accusamus velit aperiam ratione
-					repellendus! Rerum aliquam corporis qui minus ducimus modi repellendus quo minima, fugit
-					aspernatur veritatis beatae molestiae. Totam, impedit, ullam quaerat quas tempora minima
-					laboriosam nulla architecto perspiciatis adipisci fugit aut voluptatibus iste, alias
-					soluta officia illum hic veritatis quod! Iure laborum omnis, temporibus voluptatum quod
-					laudantium.
-				</article>
+				<h2 id="contact">Contacto</h2>
+				<article>CONTÁCTENOS USANDO EL SIGUIENTE FORMULARIO</article>
+				<form id="myForm" class="myForm">
+					<label for="name" class="labelMyForm">Nombre:</label>
+					<input type="text" id="name" class="inputMyForm" name="name" required />
+					<label for="email" class="labelMyForm">Correo electrónico:</label>
+					<input type="email" id="email" class="inputMyForm" name="email" required />
+					<label for="phone" class="labelMyForm">Número de teléfono:</label>
+					<input type="tel" id="phone" class="inputMyForm" name="phone" required />
+					<label for="location" class="labelMyForm">Ubicación:</label>
+					<input type="text" id="location" class="inputMyForm" name="location" required />
+					<input type="submit" class="inputSubmitMyForm" value="Enviar" />
+				</form>
 			</section>
 		</main>
-		<footer></footer>
+		<footer>Gracidev - Copyright 2023</footer>
 	</body>
 </html>

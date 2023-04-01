@@ -1,31 +1,44 @@
 * {
 	margin: 0px;
-
 	padding: 0px;
-
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
-	background-color: rgb(159, 131, 181);
+	background-color: rgb(8, 59, 122);
+	font-family: "Alkatra", cursive;
 }
-
+h1,
+h2,
+article {
+	padding: 10px;
+	color: whitesmoke;
+}
+article {
+	margin: auto;
+	padding: 20px;
+	font-size: large;
+}
 .nav-enlace {
-	background: #ffdd67;
-	color: #444444;
+	background: #1b4a76;
+	color: whitesmoke;
 	padding: 10px 30px;
 	font-size: 25px;
 	display: inline-block;
 	text-decoration: none;
+	border-radius: 60%;
+	flex-basis: content;
 }
 .nav-enlace:hover {
-	background: #fb9378;
+	background: #3b7e93;
 }
 nav {
-	background: #2c2d34;
+	/* background: #4263bf; */
 	padding: 10px;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .formulary {
@@ -36,21 +49,25 @@ nav {
 	padding: 20px;
 	position: relative;
 	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, auto);
+	color: whitesmoke;
+	/* 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: center; */
 }
 
 .formTitle {
 	text-align: center;
 	margin-top: 0;
-	color: rgba(0, 0, 0, 0.7);
 }
 .formularioInput,
 .formularioLabel,
 .formularioSubmit,
 .formularioSelect {
 	display: block;
+	color: whitesmoke;
 	/* width: 100%; */
 	/* font-size: 1.3em; */
 }
@@ -62,25 +79,70 @@ nav {
 	/* margin-bottom: 20px; */
 }
 
+.formularioSelect:hover {
+	background-color: #33bee9;
+}
+
 .formularioLabel {
 	padding-left: 15px;
 	/* position: absolute;
 	margin-top: -40px;
 	z-index: -50px; */
-	color: rgba(0, 0, 0, 0.5);
+	color: whitesmoke;
 	margin: 10px;
 }
 
 .formularioSubmit {
-	background: green;
+	background: #1b4a76;
 	padding: 10px;
 	font-weight: bold;
 	font-size: 1.2rem;
 }
+.formularioSubmit:hover {
+	background: #3b7e93;
+}
+
+.myForm {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	color: whitesmoke;
+}
+
+.labelMyForm {
+	display: inline-block;
+	width: 100px;
+	text-align: left;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+.inputMyForm {
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.inputSubmitMyForm {
+	background: #3e74a7;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-family: "Alkatra", cursive;
+	margin-left: 70px;
+}
+
+.inputSubmitMyForm:hover {
+	background-color: #0d486f;
+}
 
 @media (max-width: 600px) {
 	nav {
-		background: pink;
+		background: rgb(10, 68, 149);
 		flex-direction: column;
 	}
 	.nav-enlace {
@@ -91,4 +153,11 @@ h1,
 section {
 	text-align: center;
 	margin: 40px;
+}
+
+footer {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 20px;
+	font-weight: bold;
 }
